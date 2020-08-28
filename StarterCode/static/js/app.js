@@ -55,42 +55,43 @@ function runEnter(){
     // Create an array to store the filtered data
     var outputList = [];
 
-    // Start filtering the data using the filter inputs
-    // Check to see if a date was entered
+    // Filter data using the multiple inputs
+
+    // For date query
     if (dateValue !== "") {
-        // Filter the data if there was a date input
+        // Filter the date from the data
         outputList = tableData.filter(item => item.datetime === dateValue);
     }
     else {
-        // If there was no date input the filtered data will equal the original dataset
+        // Filtered data equals original data if no date input
         outputList = tableData;
     };
 
-    // Check to see if a city was entered
+    // For city query
     if (cityValue !== "") {
-        // Filter the data if there was a city input
+        // Filter the city
         outputList = outputList.filter(item => item.city === cityValue);
     };
 
-     // Check to see if a state was entered
+     // For state query
      if (stateValue !== "") {
-        // Filter the data if there was a state input
+        // Filter the state
         outputList = outputList.filter(item => item.state === stateValue);
     };
 
-    // Check to see if a  was entered
+    // For country query
     if (countryValue !== "") {
-        // Filter the data if there was a country input
+        // Filter the country
         outputList = outputList.filter(item => item.country === countryValue);
     };
 
-    // Check to see if a shape was entered
+    // For shape query
     if (shapeValue !== "") {
         // Filter the data if there was a shape input
         outputList = outputList.filter(item => item.shape === shapeValue);
     };
 
-    // Write the filtered data to the console
+    // Print data
     console.log(outputList);
 
     // Append outputList to each column on webpage
