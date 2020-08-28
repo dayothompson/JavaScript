@@ -93,7 +93,7 @@ function runEnter(){
     // Write the filtered data to the console
     console.log(outputList);
 
-
+    // Append outputList to each column on webpage
     outputList.forEach(info => {
         var row2 = body2.append("tr")
         Object.entries(info).forEach(([key, value]) => {
